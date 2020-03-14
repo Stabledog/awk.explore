@@ -1,7 +1,13 @@
 #!/usr/bin/awk -f
 BEGIN {
-    vx="no";
+    header="Permissions C owner group  size changed name";
+    vx="--skip--";
+    totalbytes=0;
+}
+END {
+    print "End:\t total size=" totalbytes;
 }
 
-/a\w+/ {print}
-(! /a\w+/) {print vx}
+(NR % 5)==0 { print header }
+{ totalbytes += $5; print; }
+

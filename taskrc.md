@@ -2,6 +2,8 @@
 
 [Idiomatic awk](https://backreference.org/2010/02/10/idiomatic-awk/)
 
+[AWK Tutorial](https://www.grymoire.com/Unix/Awk.html#uh-0)
+
 ```bash
 
 function interleave_fun {
